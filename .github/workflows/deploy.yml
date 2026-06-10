@@ -30,6 +30,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          # Let the action enable/point Pages at this Actions workflow itself,
+          # rather than depending on the API build_type switch having landed.
+          enablement: true
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -2526,6 +2526,29 @@
         .step-lede { font-size: 1.04rem; }
     }
 
+    /* Keep dense slides scroll-free on shorter laptop screens (e.g. a 13" 1366x768 ThinkPad). */
+    @media (max-height: 800px) {
+        .slide h2 { margin-bottom: var(--s-3); }
+        .step-eyebrow { margin-bottom: var(--s-3); }
+        .step-lede { font-size: 1.05rem; margin-bottom: var(--s-3); }
+        .steps-list { margin-top: var(--s-3); gap: var(--s-2); }
+        .steps-list li { padding-top: var(--s-3); padding-bottom: var(--s-3); }
+        .code-copy { margin-top: var(--s-4); padding-top: var(--s-3); padding-bottom: var(--s-3); }
+        .tip { margin-top: var(--s-3); padding-top: var(--s-3); padding-bottom: var(--s-3); }
+        .action-row { margin-top: var(--s-4); }
+    }
+    @media (max-height: 700px) {
+        .step-eyebrow { margin-bottom: var(--s-2); }
+        .step-lede { font-size: 1rem; margin-bottom: var(--s-2); }
+        .steps-list { margin-top: var(--s-2); gap: 0.4rem; }
+        .steps-list li { padding-top: 0.55rem; padding-bottom: 0.55rem; font-size: 0.97rem; line-height: 1.45; }
+        .code-copy { margin-top: var(--s-3); }
+        .code-copy-codes { font-size: 0.94rem; }
+        .tip { margin-top: var(--s-2); }
+        .tip p { font-size: 0.95rem; }
+        .tip p + p { margin-top: var(--s-1); }
+    }
+
     @media print {
         .steps-list li, .tip, .code-copy, .action-row { break-inside: avoid; page-break-inside: avoid; }
         .code-copy-btn { display: none; }
